@@ -20,6 +20,75 @@ Inspirado por experiências de pessoas conhecidas, o decidi investigar a relaç�
 4. **Como a razão bruta de matrícula combinada para educação terciária varia entre gêneros?**
 5. **Qual é a relação entre a assinatura de celular e a taxa líquida de matrícula combinada no ensino secundário?**
 
+## Sobre o Projeto
+
+Este repositório contém uma análise detalhada de indicadores educacionais e tecnológicos em diversas entidades ao redor do mundo. O projeto foi conduzido através da exploração de três DataFrames principais, fornecendo informações valiosas sobre indicadores educacionais e tecnológicos. Cada DataFrame possui colunas específicas que foram exploradas durante a análise.
+
+### DataFrame [`df_conexao_internet`](https://www.kaggle.com/datasets/ashishraut64/internet-users/data)
+
+#### Colunas:
+- Entity: Entidade
+- Code: Código
+- Year: Ano
+- Cellular Subscription: Assinatura de Celular
+- Internet Users(%): Usuários de Internet (%)
+- No. of Internet Users: Número de Usuários de Internet
+- Broadband Subscription: Assinatura de Banda Larga
+
+#### Ações Realizadas:
+- Verificação de valores nulos.
+- Exibição dos primeiros e últimos valores.
+- Descrição estatística das colunas.
+
+### DataFrame [`df_anos_de_escola`](https://www.kaggle.com)
+
+#### Colunas:
+- Entity: Entidade
+- Code: Código
+- Year: Ano
+- Learning-Adjusted Years of School: Anos de Escola Ajustados para Aprendizado
+
+#### Ações Realizadas:
+- Verificação de valores nulos.
+- Exibição dos primeiros e últimos valores.
+- Descrição estatística das colunas.
+
+### DataFrame [`df_educacao_genero`](https://www.kaggle.com)
+
+#### Colunas:
+- Entity: Entidade
+- Code: Código
+- Year: Ano
+- Combined gross enrolment ratio for tertiary education, female: Taxa bruta de matrícula combinada para educação superior, feminina
+- Combined gross enrolment ratio for tertiary education, male: Taxa bruta de matrícula combinada para educação superior, masculina
+- ...
+
+#### Ações Realizadas:
+- Verificação de valores nulos.
+- Exibição dos primeiros e últimos valores.
+- Descrição estatística das colunas.
+
+## Exploração Conjunta e Transformação
+
+Após entender as informações em cada DataFrame, realizamos uma exploração conjunta. Unimos os três DataFrames em um novo DataFrame chamado `df_educacao_na_rede`. Renomeamos suas colunas para o português e exportamos os dados para um arquivo CSV chamado "educação_na_rede". Utilizamos a biblioteca Translator para traduzir os nomes dos países.
+
+## Visualizações em Gráficos
+
+Abaixo estão algumas das perguntas respondidas por meio de gráficos usando a biblioteca matplotlib:
+
+```python
+# Importar as bibliotecas necessárias
+from googletrans import Translator
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Carregar DataFrames
+df_conexao_internet = pd.read_csv('caminho/do/arquivo/df_conexao_internet.csv')
+df_anos_de_escola = pd.read_csv('caminho/do/arquivo/df_anos_de_escola.csv')
+df_educacao_genero = pd.read_csv('caminho/do/arquivo/df_educacao_genero.csv')
+df_educacao_na_rede = pd.read_csv('caminho/do/arquivo/educacao_na_rede.csv')
+
 ## Análise Exploratória
 
 A análise exploratória dos dados revelou insights importantes:
