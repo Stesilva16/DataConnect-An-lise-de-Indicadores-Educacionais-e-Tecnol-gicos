@@ -76,7 +76,7 @@ Após entender as informações em cada DataFrame, realizamos uma exploração c
 
 Abaixo estão algumas das perguntas respondidas por meio de gráficos usando a biblioteca matplotlib:
 
-```python
+
 # Importar as bibliotecas necessárias
 from googletrans import Translator
 import pandas as pd
